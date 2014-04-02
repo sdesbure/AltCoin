@@ -1,4 +1,6 @@
 AltCoin::Application.routes.draw do
+  resources :exchanges
+
   resources :coins
 
   root :to => "home#index"

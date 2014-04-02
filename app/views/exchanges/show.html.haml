@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @exchange.name
+%p
+  %b Url:
+  = @exchange.url
+
+= link_to 'Edit', edit_exchange_path(@exchange)
+\|
+= link_to 'Back', exchanges_path

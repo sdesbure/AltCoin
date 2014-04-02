@@ -1,0 +1,21 @@
+%h1 Listing exchanges
+
+%table
+  %tr
+    %th Name
+    %th Url
+    %th
+    %th
+    %th
+
+  - @exchanges.each do |exchange|
+    %tr
+      %td= exchange.name
+      %td= exchange.url
+      %td= link_to 'Show', exchange
+      %td= link_to 'Edit', edit_exchange_path(exchange)
+      %td= link_to 'Destroy', exchange, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Exchange', new_exchange_path
