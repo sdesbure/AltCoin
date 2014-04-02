@@ -69,6 +69,6 @@ class CoinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def coin_params
-      params.require(:coin).permit(:name, :algorithm, :tag, :difficulty, :update_date)
+      params.require(:coin).permit(:name, :algorithm, :tag, :difficulty, :update_date, :rpc_user, :rpc_password, :rpc_port, :rpc_difficulty, :rpc_url)
     end
 end

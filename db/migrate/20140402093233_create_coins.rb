@@ -9,6 +9,7 @@ class CreateCoins < ActiveRecord::Migration
       t.string :rpc_password
       t.integer :rpc_port
       t.string :rpc_url
+      t.string :rpc_difficulty
       t.datetime :update_date
 
       t.timestamps

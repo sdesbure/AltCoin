@@ -2,9 +2,9 @@
 
 %table
   %tr
+    %th Tag
     %th Name
     %th Algorithm
-    %th Tag
     %th Difficulty
     %th Update date
     %th
@@ -13,9 +13,9 @@
 
   - @coins.each do |coin|
     %tr
+      %td= coin.tag
       %td= coin.name
       %td= coin.algorithm
-      %td= coin.tag
       %td= coin.difficulty
       %td= coin.update_date
       %td= link_to 'Show', coin
