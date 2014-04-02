@@ -35,6 +35,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'thin'
+  gem 'pry-rails'
+  gem "pry-plus"
+  gem "awesome_print"
 end
 group :production do
   gem 'unicorn'
