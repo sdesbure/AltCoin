@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @coin.name
+%p
+  %b Algorithm:
+  = @coin.algorithm
+%p
+  %b Tag:
+  = @coin.tag
+%p
+  %b Difficulty:
+  = @coin.difficulty
+%p
+  %b Update date:
+  = @coin.update_date
+
+= link_to 'Edit', edit_coin_path(@coin)
+\|
+= link_to 'Back', coins_path

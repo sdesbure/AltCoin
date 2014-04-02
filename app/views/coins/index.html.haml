@@ -1,0 +1,27 @@
+%h1 Listing coins
+
+%table
+  %tr
+    %th Name
+    %th Algorithm
+    %th Tag
+    %th Difficulty
+    %th Update date
+    %th
+    %th
+    %th
+
+  - @coins.each do |coin|
+    %tr
+      %td= coin.name
+      %td= coin.algorithm
+      %td= coin.tag
+      %td= coin.difficulty
+      %td= coin.update_date
+      %td= link_to 'Show', coin
+      %td= link_to 'Edit', edit_coin_path(coin)
+      %td= link_to 'Destroy', coin, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Coin', new_coin_path
