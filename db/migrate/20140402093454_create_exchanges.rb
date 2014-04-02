@@ -3,6 +3,7 @@ class CreateExchanges < ActiveRecord::Migration
     create_table :exchanges do |t|
       t.string :name
       t.string :url
+      t.string :encapsulation
 
       t.timestamps
     end

@@ -11,10 +11,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402082059) do
+ActiveRecord::Schema.define(version: 20140402095257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coin_exchanges", force: true do |t|
+    t.integer  "coin_id"
+    t.integer  "exchange_id"
+    t.float    "price"
+    t.datetime "update_time"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "coin_values", force: true do |t|
+    t.integer  "coin_id"
+    t.integer  "exchange_id"
+    t.datetime "time_when"
+    t.float    "difficulty"
+    t.float    "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "coins", force: true do |t|
+    t.string   "name"
+    t.string   "algorithm"
+    t.string   "tag"
+    t.float    "difficulty"
+    t.string   "rpc_user"
+    t.string   "rpc_password"
+    t.integer  "rpc_port"
+    t.string   "rpc_url"
+    t.string   "rpc_difficulty"
+    t.datetime "update_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "exchanges", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
