@@ -3,7 +3,7 @@ class CreateCoinValues < ActiveRecord::Migration
     create_table :coin_values do |t|
       t.reference :coin
       t.reference :exchange
-      t.datetime :when
+      t.datetime :time_when
       t.float :difficulty
       t.float :price
 

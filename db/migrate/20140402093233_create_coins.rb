@@ -5,6 +5,10 @@ class CreateCoins < ActiveRecord::Migration
       t.string :algorithm
       t.string :tag
       t.float :difficulty
+      t.string :rpc_user
+      t.string :rpc_password
+      t.integer :rpc_port
+      t.string :rpc_url
       t.datetime :update_date
 
       t.timestamps
