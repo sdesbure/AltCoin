@@ -1,0 +1,12 @@
+= simple_form_for(@coin_exchange) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :coin
+    = f.input :exchange
+    = f.input :price
+    = f.input :update_time
+    = f.input :url
+
+  .form-actions
+    = f.button :submit

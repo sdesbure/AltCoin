@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Coin:
+  = @coin_exchange.coin
+%p
+  %b Exchange:
+  = @coin_exchange.exchange
+%p
+  %b Price:
+  = @coin_exchange.price
+%p
+  %b Update time:
+  = @coin_exchange.update_time
+%p
+  %b Url:
+  = @coin_exchange.url
+
+= link_to 'Edit', edit_coin_exchange_path(@coin_exchange)
+\|
+= link_to 'Back', coin_exchanges_path

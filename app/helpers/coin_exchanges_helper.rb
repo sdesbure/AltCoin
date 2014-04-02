@@ -1,0 +1,2 @@
+module CoinExchangesHelper
+end

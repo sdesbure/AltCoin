@@ -1,0 +1,27 @@
+%h1 Listing coin_exchanges
+
+%table
+  %tr
+    %th Coin
+    %th Exchange
+    %th Price
+    %th Update time
+    %th Url
+    %th
+    %th
+    %th
+
+  - @coin_exchanges.each do |coin_exchange|
+    %tr
+      %td= coin_exchange.coin
+      %td= coin_exchange.exchange
+      %td= coin_exchange.price
+      %td= coin_exchange.update_time
+      %td= coin_exchange.url
+      %td= link_to 'Show', coin_exchange
+      %td= link_to 'Edit', edit_coin_exchange_path(coin_exchange)
+      %td= link_to 'Destroy', coin_exchange, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Coin exchange', new_coin_exchange_path
